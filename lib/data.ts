@@ -19,3 +19,10 @@ export const DEMORAS: Demora[] = [
  ["HAA-4567","C-085","OC","A02","01:15","Revisión documental"],["PDC1845","C-086","BA","A03","00:45","Carga incompleta"],["HJK7788","C-087","SPS","A04","00:20","Espera en patio"],
  ["JDA3940","C-090","OC","A05","00:35","Trámite aduanal"],["TCB1639","C-091","BA","A06","00:50","Falla en equipo"],["QWE2371","C-092","SPS","A07","00:25","Congestión vial"],["RTY5643","C-093","OC","A08","00:40","Documentación"]
 ].map((r,i)=>({n:i+1,placa:r[0],carga:r[1],destino:r[2],anden:r[3],tiempo:r[4],causa:r[5],resuelta:false}));
+export type Ruta = { placa:string; capacidad:number; motorista:string; hora:string; ruta_final:string; punto1:string; punto2:string };
+export const RUTAS: Ruta[] = [
+ {placa:"JDI2023",capacidad:21,motorista:"Adan Martinez",hora:"09:00:00",ruta_final:"ZN, OLAN",punto1:"UMMM VICTORIA",punto2:"UMMM YORO"},
+ {placa:"PDC1845",capacidad:18,motorista:"Luis García",hora:"09:30:00",ruta_final:"BA",punto1:"UMMM LA LIMA",punto2:"UMMM VILLANUEVA"},
+ {placa:"HJK7788",capacidad:20,motorista:"Roberto Díaz",hora:"10:00:00",ruta_final:"SPS",punto1:"UMMM COFRADÍA",punto2:"UMMM EL PROGRESO"},
+ {placa:"HAA-4567",capacidad:30,motorista:"Juan Pérez",hora:"08:30:00",ruta_final:"SPS",punto1:"UMMM LA LIMA",punto2:"UMMM VILLANUEVA"},
+ {placa:"JDA3940",capacidad:21,motorista:"Fernando Cruz",hora:"11:00:00",ruta_final:"OC",punto1:"UMMM YORO",punto2:"UMMM VICTORIA"}];

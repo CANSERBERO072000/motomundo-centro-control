@@ -4,3 +4,5 @@ create table demoras(n int primary key,placa text,carga text,destino text,anden 
 create table despachos(id text primary key,manifiesto text,placa text,motorista text,destino text,anden text,plan int,carg int,doc text,estado text,hora text);
 create table notificaciones(id bigserial primary key,texto text,hora text);
 alter publication supabase_realtime add table andenes,cargas,demoras,despachos,notificaciones;
+create table rutas(placa text primary key,capacidad int,motorista text,hora text,ruta_final text,punto1 text,punto2 text);
+alter publication supabase_realtime add table rutas;
